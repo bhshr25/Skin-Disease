@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkinSight</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Inter', sans-serif;
+      background: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .creator-button {
+        background-color: #ffcaca;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        border: 2px solid #ffcaca; /* Keep pink border */
+        outline: none;             /* Remove black outline */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+
+    .creator-button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 100px; /* Increased gap */
+    }
+
+    .upload-box {
+      width: 420px;
+      height: 420px;
+      background-color: #ffcaca;
+      border-radius: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 32px;
+      box-sizing: border-box;
+    }
+
+    .upload-button {
+      background-color: black;
+      color: white;
+      font-weight: 500;
+      padding: 16px 32px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .upload-button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .text-section {
+      max-width: 560px;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #4f4f4f;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .disclaimer {
+      font-size: 14px;
+      color: #828282;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .main-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .text-section {
+        max-width: 100%;
+      }
+
+      .upload-box {
+        width: 90vw;
+        height: 90vw;
+        border-radius: 30vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">SkinSight</div>
+    <button class="creator-button">About the creator</button>
+  </div>
+
+  <div class="main-container">
+    <div class="upload-box">
+      <div class="upload-button">Upload Image</div>
+    </div>
+
+    <div class="text-section">
+      <div class="title">AI-Powered Skin Analysis</div>
+      <div class="description">
+        SkinSight utilizes advanced deep learning algorithms to analyze dermatological images and identify potential skin conditions. Our system has been trained on a diverse dataset to recognize patterns associated with various skin concerns.
+        <br><br>
+        The technology behind SkinSight examines visual characteristics of your skin, comparing them against known dermatological patterns. This provides you with preliminary insights that can help guide your healthcare decisions.
+      </div>
+      <div class="disclaimer">
+        This application serves as an informational tool only and does not constitute medical advice. For professional diagnosis and treatment, please consult a qualified dermatologist or healthcare provider.
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
